@@ -1,5 +1,5 @@
 import pandas as pd
-df = pd.read_csv('/Users/chenyian/Documents/house_price_cleaned01.csv', index_col=0)
+df = pd.read_csv('house_price_cleaned01.csv', index_col=0)
 
 
 
