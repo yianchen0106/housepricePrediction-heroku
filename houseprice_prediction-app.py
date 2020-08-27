@@ -45,7 +45,7 @@ def user_input_features():
 df_in = user_input_features()
 
 
-df = pd.read_csv('house_price_cleaned01.csv', index_col=0)
+df = pd.read_csv('house_price_cleaned01.csv')
 df_price = df['price']
 df.drop(columns=['price'], inplace=True)
 df_new=pd.concat([df_in, df], axis=0)
