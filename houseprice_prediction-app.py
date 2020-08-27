@@ -45,7 +45,7 @@ def user_input_features():
 df_in = user_input_features()
 
 
-df = pd.read_csv('/Users/chenyian/Documents/house_price_cleaned01.csv', index_col=0)
+df = pd.read_csv('house_price_cleaned01.csv', index_col=0)
 df_price = df['price']
 df.drop(columns=['price'], inplace=True)
 df_new=pd.concat([df_in, df], axis=0)
@@ -61,7 +61,7 @@ x = df_x[:1]
 st.subheader('Standardized User Input features')
 st.write(x)
 
-load_reg = pickle.load(open('/Users/chenyian/.atom/house_svr.pkl', 'rb'))
+load_reg = pickle.load(open('house_svr.pkl', 'rb'))
 
 pred = load_reg.predict(x)
 
